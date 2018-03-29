@@ -8,7 +8,7 @@ const plugins = [
   }),
   new ExtractTextPlugin({
     filename: "bundle.css",
-    disable: process.env.NODE_ENV === "development"
+    disable: process.env.NODE_ENV !== "prod"
   })
 ]
 
@@ -41,6 +41,18 @@ module.exports = {
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
+      },
+
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   },

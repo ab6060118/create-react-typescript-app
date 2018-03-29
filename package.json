@@ -19,6 +19,7 @@
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",
     "typescript": "^2.7.2",
+    "url-loader": "^1.0.1",
     "webpack": "3.11.0",
     "webpack-dev-server": "2.11.0"
   },
