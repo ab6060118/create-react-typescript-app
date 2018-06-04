@@ -13,6 +13,7 @@ const plugins = [
 ]
 
 module.exports = {
+  mode: 'development',
   entry: __dirname + "/src/index.tsx",
   output: {
     filename: "bundle.js",
