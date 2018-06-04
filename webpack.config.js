@@ -44,7 +44,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'url-loader',
@@ -63,5 +63,6 @@ module.exports = {
     host: '0.0.0.0',
     port: '9000',
     hot: true,
+    overlay:true,
   }
 };
