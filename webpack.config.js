@@ -8,7 +8,7 @@ const plugins = [
   }),
   new ExtractTextPlugin({
     filename: "bundle.css",
-    disable: process.env.NODE_ENV !== "prod"
+    disable: process.env.NODE_ENV !== "production"
   })
 ]
 
@@ -21,7 +21,7 @@ module.exports = {
   },
 
   // Enable sourcemaps for debugging webpack's output.
-  devtool: "source-map",
+  devtool: process.env.NODE_ENV !== "production" ? "source-map" : undefined,
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
